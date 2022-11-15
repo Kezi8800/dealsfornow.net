@@ -1,17 +1,21 @@
-<html lang="en">
-  <head>
-        <script>var googletag = googletag || {};
-      googletag.cmd = googletag.cmd || [];
-    </script>
-            <link rel="preload" href="/frontpage/promoted-content/?isReturningUser=1&amp;hasPrefs=0" as="fetch" crossorigin="anonymous">
-  <link rel="preload" href="/frontpage/desktop-recommendation-carousel" as="fetch" crossorigin="anonymous">
-<script>
-(function(w){'use strict';const requestedUrls=[];const keyData={};function fetch(key,url,callback){if(url[0]!=='/'){throw new Error('URL is malformed')}if(requestedUrls.indexOf(url)>-1){throw new Error('Provided url has already been requested');}if(key in keyData){throw new Error('Specified key already exists');}processUrl(key,url,callback)}function processUrl(key,url,callback){keyData[key]={'loaded':false,'url':url,'callbacks':[],'error':null,};requestedUrls.push(url);if(typeof callback==='function'||callback&&typeof callback.fulfill==='function'){keyData[key].callbacks.push(callback)}if(typeof window.fetch!=='undefined'){window.fetch(url).then(response=>handleFetchResponse(key,response)).catch(err=>handleFetchError(key,err))}}function handleFetchResponse(key,response){if(response.ok){return response.text().then(text=>handleFetchText(key,text))}else{throw new Error('Url failed to fetch - bad request');}}function handleFetchText(key,text){keyData[key].data=text;keyData[key].loaded=true;if('callbacks'in keyData[key]&&keyData[key].callbacks.length){for(let i=0;i<keyData[key].callbacks.length;i++){let callback=keyData[key].callbacks[i];if(typeof callback==='function'){callback(text)}else if(typeof callback.fulfill==='function'){callback.fulfill(text)}delete keyData[key].callbacks[i]}}}function handleFetchError(key,error){keyData[key].error=error;if('callbacks'in keyData[key]&&keyData[key].callbacks.length){for(let i=0;i<keyData[key].callbacks.length;i++){let callback=keyData[key].callbacks[i];if(typeof callback.reject==='function'){callback.reject(error)}delete keyData[key].callbacks[i]}}}function getData(key,callback){if(key in keyData){if(keyData[key].loaded===true){if(typeof callback==='function'){return callback(keyData[key].data)}else if(callback&&typeof callback.fulfill==='function'){return callback.fulfill(keyData[key].data)}else{return keyData[key].data}}else{if(keyData[key].error){if(callback&&typeof callback.reject==='function'){callback.reject(keyData[key].error)}else{}}else if(typeof callback==='function'||callback&&typeof callback.fulfill==='function'){keyData[key].callbacks.push(callback)}}}else{throw new Error('Either no key was provided, or no key-url pair exists');}}function addCallback(key,callback){if(!callback||typeof callback!=='function'&&typeof callback.fulfill!=='function'){throw new Error('Expected a valid callback or { fulfill, reject } callback pair');}if(!hasKey(key)){throw new Error(key+' Key does not exist');}getData(key,callback);}function hasKey(key){return key in keyData;}function isKeyLoaded(key){if(key in keyData){return keyData[key].loaded;}throw new Error('Either no key was provided, or no key-url pair exists');}function dumpLoadTable(){console.info(keyData,requestedUrls);}if(!w.hasOwnProperty('immediateFetch')){w.immediateFetch={'fetch':fetch,'isKeyLoaded':isKeyLoaded,'getData':getData,'addCallback':addCallback,'dumpLoadTable':dumpLoadTable,'hasKey':hasKey,}}}(window));
-</script>
-<script>
-            window.immediateFetch.fetch('frontpagePromotedContent', '\/frontpage\/promoted\u002Dcontent\/\u003FisReturningUser\u003D1\u0026hasPrefs\u003D0');
-            window.immediateFetch.fetch('jfyCarousel', '\/frontpage\/desktop\u002Drecommendation\u002Dcarousel');
-    </script>
-        <link rel="preload" href="/ajax/bSubNavPlacement.php?section=slickdealsindex&amp;url=%2F" as="fetch" crossorigin="anonymous">
-  <script>
-    window.immediateFetch.fetch('banner', '/ajax/bSubNavPlacement.php?section=slickdealsindex&url=%2F');
+"@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "RedFlagDeals",
+            "description": "RedFlagDeals.com is the leading provider of online promotions and shopping tools to Canadians. We publish thousands of deals and coupons across more than 70 categories. The company has full-time staff dedicated to finding deals, coupons and freebies. RedFlagDeals.com has 3.99 million visitors every month and there are more than 775,000 registered users in our community.",
+            "image": "https://assets.rfdcontent.com/graphics/rfd/v33.13.21/sprites/responsive_base.png",
+            "logo": "https://assets.rfdcontent.com/graphics/rfd/v33.13.21/sprites/responsive_base.png",
+            "url": "https://www.redflagdeals.com/",
+            "sameAs": [
+                "https://twitter.com/RedFlagDeals",
+                "https://www.facebook.com/redflagdeals",
+                "https://www.youtube.com/user/redflagdeals",
+                "https://www.instagram.com/redflagdeals/",
+                "https://en.wikipedia.org/wiki/RedFlagDeals.com",
+                "https://www.wikidata.org/wiki/Q7303552"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "111 Peter Street, Suite 600",
+                "addressLocality": "Toronto, Ontario",
+                "postalCode": "M5V 2H1",
+                "addressCountry": "Canada"
